@@ -1,0 +1,141 @@
+/* COLOR PALETTE */
+:root {
+  --primary-violet: #8a2be2;
+  --dark-violet: #4b0082;
+  --black-bg: #0a0a0a;
+  --text-white: #ffffff;
+  --overlay-dark: rgba(0, 0, 0, 0.85);
+  --overlay-violet: rgba(138, 43, 226, 0.3);
+  
+  /* WEBSITE BG */
+  --bg-image: url('exude.jpg');
+}
+
+body {
+  background-color: var(--black-bg);
+  color: var(--text-white);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BG OVERLAYS */
+.bg-studio {
+  background-image: linear-gradient(135deg, var(--overlay-dark), var(--overlay-violet)), var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  flex: 1;
+}
+
+/* NAVBARS */
+.navbar {
+  background-color: #000000 !important; 
+  border-bottom: 2px solid transparent; 
+  transition: all 0.4s ease;
+  padding: 1rem 0;
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link {
+  color: #dddddd !important; 
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover, 
+.navbar .nav-link.active {
+  color: #ffffff !important; 
+  text-decoration: underline; 
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  border-bottom: 2px solid var(--primary-violet); 
+  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4); 
+  padding: 0.5rem 0;
+}
+
+.navbar.scrolled .navbar-brand {
+  color: var(--primary-violet) !important; 
+}
+
+.navbar.scrolled .nav-link:hover, 
+.navbar.scrolled .nav-link.active {
+  color: var(--primary-violet) !important; 
+  text-decoration: none;
+}
+
+/* TEXT DESIGN */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-violet {
+  color: var(--primary-violet);
+}
+
+/* BUTTONS */
+.btn-primary {
+  background-color: var(--primary-violet);
+  border-color: var(--primary-violet);
+  color: white;
+  font-weight: 600;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-violet);
+  border-color: var(--dark-violet);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+}
+
+/* CARDS */
+.card {
+  background-color: rgba(20, 20, 20, 0.8);
+  border: 1px solid var(--primary-violet);
+  backdrop-filter: blur(5px);
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+}
+
+.instructor-img {
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  border-top: 1px solid #333;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+/* TRANSITION */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
